@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,23 +11,29 @@
       padding: 0;
       background: #f5f5f5;
     }
+
     header {
       background: #2c3e50;
       color: white;
-      padding: 20px;
-      text-align: center;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
-    nav {
-      margin-top: 10px;
+
+    .logo {
+      height: 60px;
     }
+
     nav a {
       color: white;
       text-decoration: none;
       margin: 0 15px;
       font-weight: bold;
     }
+
     .hero {
-      background: url('https://source.unsplash.com/1600x600/?business,office') no-repeat center center/cover;
+      background: url('https://source.unsplash.com/1600x600/?business,success') no-repeat center center/cover;
       height: 400px;
       display: flex;
       align-items: center;
@@ -36,14 +41,43 @@
       color: white;
       font-size: 32px;
       font-weight: bold;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
     }
+
     .content {
       padding: 40px;
       text-align: center;
     }
+
     .content h2 {
       color: #2c3e50;
+      margin-bottom: 20px;
     }
+
+    .content p {
+      max-width: 800px;
+      margin: 15px auto;
+      line-height: 1.6;
+      color: #333;
+      font-size: 18px;
+    }
+
+    .gallery {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 40px 0;
+    }
+
+    .gallery img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    }
+
     .footer {
       background: #2c3e50;
       color: white;
@@ -54,8 +88,9 @@
   </style>
 </head>
 <body>
+  <!-- Header with Logo + Nav -->
   <header>
-    <h1>Maleeha’s Business</h1>
+    <img src="logo.png" alt="Business Logo" class="logo">
     <nav>
       <a href="#">Home</a>
       <a href="#">About</a>
@@ -64,17 +99,30 @@
     </nav>
   </header>
 
+  <!-- Hero Section -->
   <section class="hero">
     Grow Your Future with Us 🚀
   </section>
 
+  <!-- About / Content -->
   <section class="content">
     <h2>Welcome!</h2>
-    <p>We help people with innovative services and products. This is my first professional website built with GitHub Pages.</p>
+    <p>At Maleeha’s Business, we empower people to grow their future with confidence. Our mission is to provide innovative solutions that inspire progress and success.</p>
+    <p>We offer personalized guidance and professional services that help individuals and businesses unlock their full potential in today’s competitive world.</p>
+    <p>With creativity, dedication, and expertise, we make sure every client achieves their goals with ease and excellence.</p>
   </section>
 
+  <!-- Gallery with Your Images -->
+  <section class="gallery">
+    <img src="IMG_2501.jpeg" alt="Business Photo 1">
+    <img src="IMG_2502.jpeg" alt="Business Photo 2">
+    <img src="IMG_2503.jpeg" alt="Business Photo 3">
+  </section>
+
+  <!-- Footer -->
   <div class="footer">
     © 2025 Maleeha’s Business | All Rights Reserved
   </div>
 </body>
 </html>
+
