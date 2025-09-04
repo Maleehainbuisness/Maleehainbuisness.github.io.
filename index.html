@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maleeha's Business</title>
+    <title>Maleeha's Finance - Financial Freedom for Women</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
@@ -86,7 +86,7 @@
         }
         
         .hero {
-            background: url('https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            background: url('https://images.unsplash.com/photo-1554224155-6726b3ff858c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1611&q=80') no-repeat center center/cover;
             color: white;
             position: relative;
             padding: 150px 0;
@@ -137,6 +137,7 @@
             border: none;
             font-size: 18px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            cursor: pointer;
         }
         
         .btn:hover {
@@ -347,7 +348,8 @@
         }
         
         .form-group input,
-        .form-group textarea {
+        .form-group textarea,
+        .form-group select {
             width: 100%;
             padding: 15px;
             border: 1px solid #ddd;
@@ -357,6 +359,27 @@
         
         .form-group textarea {
             min-height: 150px;
+        }
+        
+        .form-message {
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: none;
+        }
+        
+        .form-message.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            display: block;
+        }
+        
+        .form-message.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            display: block;
         }
         
         footer {
@@ -494,194 +517,4 @@
         <div class="container hero-content">
             <h1>Take Control of Your Money — Starting Today</h1>
             <p>Are you tired of feeling stuck, stressed, or confused about money? You deserve financial freedom and peace of mind.</p>
-            <a onclick="showSection('courses')" class="btn">Explore Courses</a>
-        </div>
-    </section>
-
-    <section id="about" class="section">
-        <div class="container">
-            <div class="section-title">
-                <h2>About Maleeha's Finance</h2>
-                <p>Empowering women to achieve financial independence</p>
-            </div>
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Business Meeting">
-                </div>
-                <div class="about-text">
-                    <h2>Created for You, by Someone Who Gets It</h2>
-                    <p>🌸 Take Control of Your Money — Starting Today</p>
-                    <p>Are you tired of feeling stuck, stressed, or confused about money? You deserve financial freedom and peace of mind. My courses are designed for women who want to grow their income, save smarter, and build stability—without overwhelm or boring lectures.</p>
-                    <p>💡 Step-by-Step Lessons That Actually Work</p>
-                    <p>Inside my programs, you'll find easy-to-follow video lessons, templates you can download instantly, and simple checklists that show you exactly what to do next. From budgeting and saving, to building an emergency fund, paying off debt, and starting your first side hustle—everything is broken down into practical steps you can apply right away.</p>
-                    <p>✨ Created for You, by Someone Who Gets It</p>
-                    <p>Hi, I'm Maleeha! I've helped women just like you go from financial stress to financial confidence. I built these courses because I know how powerful it feels to be in charge of your money—and I want you to feel that too. My goal? To help you build wealth, freedom, and the future you've been dreaming of.</p>
-                    <p>👉 Ready to start? Enroll today and take the first step toward financial independence.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="courses" class="section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Financial Courses</h2>
-                <p>Transform your financial future with our expertly designed courses</p>
-            </div>
-            <div class="courses-grid">
-                <!-- Course content will be added later -->
-                <div class="course-card">
-                    <div class="course-icon">
-                        <i class="fas fa-plus-circle"></i>
-                    </div>
-                    <h3>More Courses Coming Soon</h3>
-                    <p>We're preparing amazing financial courses to help you achieve your goals</p>
-                </div>
-                <div class="course-card">
-                    <div class="course-icon">
-                        <i class="fas fa-plus-circle"></i>
-                    </div>
-                    <h3>More Courses Coming Soon</h3>
-                    <p>We're preparing amazing financial courses to help you achieve your goals</p>
-                </div>
-                <div class="course-card">
-                    <div class="course-icon">
-                        <i class="fas fa-plus-circle"></i>
-                    </div>
-                    <h3>More Courses Coming Soon</h3>
-                    <p>We're preparing amazing financial courses to help you achieve your goals</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="stories" class="section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Success Stories</h2>
-                <p>Hear from women who transformed their financial lives</p>
-            </div>
-            <div class="stories-grid">
-                <div class="story-card">
-                    <p class="story-text">"Maleeha's course changed everything for me. I went from living paycheck to paycheck to saving over $5,000 in just six months!"</p>
-                    <div class="story-author">
-                        <div class="story-avatar">S</div>
-                        <div class="story-name">Sarah, 32</div>
-                    </div>
-                </div>
-                <div class="story-card">
-                    <p class="story-text">"The side hustle course gave me the confidence to start my own business. I'm now making an extra $2,000 a month doing what I love!"</p>
-                    <div class="story-author">
-                        <div class="story-avatar">M</div>
-                        <div class="story-name">Michelle, 28</div>
-                    </div>
-                </div>
-                <div class="story-card">
-                    <p class="story-text">"I was drowning in debt until I found Maleeha's program. Her practical approach helped me become debt-free in 18 months."</p>
-                    <div class="story-author">
-                        <div class="story-avatar">J</div>
-                        <div class="story-name">Jessica, 35</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contact Us</h2>
-                <p>Get in touch for more information about our courses</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="info-card">
-                        <h3>Contact Information</h3>
-                        <p><i class="fas fa-envelope"></i> 0maleehaBuisness@gmail.com</p>
-                        <p><i class="fas fa-phone"></i> +1 (123) 456-7890</p>
-                        <p><i class="fas fa-map-marker-alt"></i> Financial Freedom Street, Suite 101</p>
-                    </div>
-                    <div class="info-card">
-                        <h3>Follow Us</h3>
-                        <p><i class="fab fa-instagram"></i> @maleehax_finance</p>
-                        <p><i class="fab fa-facebook"></i> Maleeha's Finance</p>
-                        <p><i class="fab fa-youtube"></i> Maleeha Finance Channel</p>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" placeholder="Enter your name">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" placeholder="Enter your email">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Your Message</label>
-                            <textarea id="message" placeholder="How can we help you?"></textarea>
-                        </div>
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">Maleeha's Finance</div>
-                <p>Empowering women to achieve financial freedom and peace of mind</p>
-                <ul class="footer-links">
-                    <li><a onclick="showSection('home')">Home</a></li>
-                    <li><a onclick="showSection('about')">About</a></li>
-                    <li><a onclick="showSection('courses')">Courses</a></li>
-                    <li><a onclick="showSection('stories')">Success Stories</a></li>
-                    <li><a onclick="showSection('contact')">Contact</a></li>
-                </ul>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-pinterest"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                </div>
-                <div class="copyright">
-                    <p>© 2025 Maleeha's Finance | All Rights Reserved</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        function showSection(sectionId) {
-            // Hide all sections
-            document.querySelectorAll('.section').forEach(section => {
-                section.style.display = 'none';
-            });
-            
-            // Hide home section
-            document.getElementById('home').style.display = 'none';
-            
-            // Show the selected section
-            document.getElementById(sectionId).style.display = 'block';
-            
-            // Scroll to the top of the page
-            window.scrollTo(0, 0);
-        }
-
-        // Simple JavaScript for header scroll effect
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.style.background = 'linear-gradient(90deg, #6b5ce7 0%, #4c40ce 100%)';
-                header.style.padding = '15px 0';
-            } else {
-                header.style.background = 'linear-gradient(90deg, #6b5ce7 0%, #4c40ce 100%)';
-                header.style.padding = '20px 0';
-            }
-        });
-    </script>
-</body>
-</html>
+            <a onclick="show
