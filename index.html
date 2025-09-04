@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maleeha's Financial Courses</title>
+    <title>Maleeha's Business</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
@@ -18,6 +18,7 @@
             color: #333;
             line-height: 1.6;
             background: linear-gradient(135deg, #f9f7ff 0%, #f0f4ff 100%);
+            scroll-behavior: smooth;
         }
         
         .container {
@@ -31,6 +32,10 @@
             color: white;
             padding: 20px 0;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
         }
         
         .header-container {
@@ -66,18 +71,25 @@
             font-weight: 500;
             transition: color 0.3s;
             font-size: 17px;
+            cursor: pointer;
         }
         
         nav ul li a:hover {
             color: #ffdd40;
         }
         
-        .hero {
+        section {
             padding: 100px 0;
-            text-align: center;
-            background: url('https://images.unsplash.com/photo-1554224155-6726b3ff858c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1611&q=80') no-repeat center center/cover;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero {
+            background: url('https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
             color: white;
             position: relative;
+            padding: 150px 0;
         }
         
         .hero::before {
@@ -94,6 +106,7 @@
             position: relative;
             max-width: 850px;
             margin: 0 auto;
+            text-align: center;
         }
         
         .hero h1 {
@@ -132,14 +145,6 @@
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
         }
         
-        .section {
-            padding: 90px 0;
-        }
-        
-        .section-light {
-            background: white;
-        }
-        
         .section-title {
             text-align: center;
             margin-bottom: 60px;
@@ -165,48 +170,7 @@
             border-radius: 2px;
         }
         
-        .features {
-            background: #f8f9ff;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-        }
-        
-        .feature-card {
-            background: white;
-            border-radius: 15px;
-            padding: 40px 30px;
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .feature-icon {
-            font-size: 50px;
-            color: #6b5ce7;
-            margin-bottom: 25px;
-        }
-        
-        .feature-card h3 {
-            font-family: 'Montserrat', sans-serif;
-            margin-bottom: 20px;
-            color: #4c40ce;
-            font-size: 22px;
-        }
-        
-        .feature-card p {
-            color: #666;
-        }
-        
-        .about {
+        .about-content {
             display: flex;
             align-items: center;
             gap: 60px;
@@ -225,18 +189,18 @@
             display: block;
         }
         
-        .about-content {
+        .about-text {
             flex: 1;
         }
         
-        .about-content h2 {
+        .about-text h2 {
             font-family: 'Montserrat', sans-serif;
             font-size: 36px;
             color: #4c40ce;
             margin-bottom: 25px;
         }
         
-        .about-content p {
+        .about-text p {
             margin-bottom: 20px;
             font-size: 17px;
             line-height: 1.8;
@@ -250,82 +214,70 @@
             color: #4c40ce;
         }
         
-        .courses {
-            background: linear-gradient(135deg, #6b5ce7 0%, #4c40ce 100%);
-            color: white;
-        }
-        
-        .courses .section-title h2 {
-            color: white;
-        }
-        
         .courses-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            gap: 40px;
         }
         
         .course-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
+            background: white;
             border-radius: 15px;
             padding: 40px 30px;
             text-align: center;
-            transition: transform 0.3s;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
         }
         
         .course-card:hover {
             transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
         
         .course-icon {
             font-size: 50px;
-            color: #ffdd40;
+            color: #6b5ce7;
             margin-bottom: 25px;
         }
         
         .course-card h3 {
             font-family: 'Montserrat', sans-serif;
             margin-bottom: 20px;
-            font-size: 24px;
+            color: #4c40ce;
+            font-size: 22px;
         }
         
         .course-card p {
+            color: #666;
             margin-bottom: 25px;
         }
         
-        .testimonials {
-            background: #f8f9ff;
-        }
-        
-        .testimonials-grid {
+        .stories-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
         
-        .testimonial-card {
+        .story-card {
             background: white;
             border-radius: 15px;
             padding: 30px;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
         }
         
-        .testimonial-text {
+        .story-text {
             font-style: italic;
             margin-bottom: 20px;
             color: #555;
             line-height: 1.8;
         }
         
-        .testimonial-author {
+        .story-author {
             display: flex;
             align-items: center;
         }
         
-        .testimonial-avatar {
+        .story-avatar {
             width: 50px;
             height: 50px;
             border-radius: 50%;
@@ -338,40 +290,73 @@
             margin-right: 15px;
         }
         
-        .testimonial-name {
+        .story-name {
             font-weight: 600;
             color: #4c40ce;
         }
         
-        .cta {
-            text-align: center;
-            padding: 100px 0;
-            background: linear-gradient(135deg, #ffdd40 0%, #ffd21c 100%);
-            color: #4c40ce;
+        .contact-content {
+            display: flex;
+            gap: 60px;
         }
         
-        .cta h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 42px;
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-form {
+            flex: 1;
+        }
+        
+        .info-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
             margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
         }
         
-        .cta p {
+        .info-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 20px;
+            color: #4c40ce;
+            font-size: 22px;
+        }
+        
+        .info-card p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .info-card i {
+            margin-right: 15px;
+            color: #6b5ce7;
             font-size: 20px;
-            margin-bottom: 40px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+            width: 24px;
         }
         
-        .btn-dark {
-            background: #4c40ce;
-            color: white;
+        .form-group {
+            margin-bottom: 20px;
         }
         
-        .btn-dark:hover {
-            background: #3b30b0;
-            color: white;
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
         }
         
         footer {
@@ -436,6 +421,18 @@
             color: #ccc;
         }
         
+        .active {
+            display: block;
+        }
+        
+        .section {
+            display: none;
+        }
+        
+        #home {
+            display: block;
+        }
+        
         @media (max-width: 768px) {
             .header-container {
                 flex-direction: column;
@@ -459,7 +456,11 @@
                 font-size: 18px;
             }
             
-            .about {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .contact-content {
                 flex-direction: column;
             }
             
@@ -479,143 +480,152 @@
             <div class="logo">Maleeha's <span>Finance</span></div>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Courses</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Success Stories</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a onclick="showSection('home')">Home</a></li>
+                    <li><a onclick="showSection('about')">About</a></li>
+                    <li><a onclick="showSection('courses')">Courses</a></li>
+                    <li><a onclick="showSection('stories')">Success Stories</a></li>
+                    <li><a onclick="showSection('contact')">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="hero">
+    <section id="home" class="hero">
         <div class="container hero-content">
             <h1>Take Control of Your Money — Starting Today</h1>
             <p>Are you tired of feeling stuck, stressed, or confused about money? You deserve financial freedom and peace of mind.</p>
-            <a href="#" class="btn">Explore Courses</a>
+            <a onclick="showSection('courses')" class="btn">Explore Courses</a>
         </div>
     </section>
 
-    <section class="section features">
+    <section id="about" class="section">
         <div class="container">
             <div class="section-title">
-                <h2>Why Choose Our Courses</h2>
-                <p>Designed for women who want to grow their income, save smarter, and build stability</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Step-by-Step Lessons</h3>
-                    <p>Easy-to-follow video lessons that show you exactly what to do next</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-file-download"></i>
-                    </div>
-                    <h3>Downloadable Templates</h3>
-                    <p>Practical templates and checklists you can use right away</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-hands-helping"></i>
-                    </div>
-                    <h3>Proven Strategies</h3>
-                    <p>From budgeting to side hustles - everything broken down into practical steps</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section section-light">
-        <div class="container about">
-            <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="Maleeha - Financial Coach">
+                <h2>About Maleeha's Finance</h2>
+                <p>Empowering women to achieve financial independence</p>
             </div>
             <div class="about-content">
-                <h2>Created for You, by Someone Who Gets It</h2>
-                <p>Hi, I'm <span class="highlight">Maleeha</span>! I've helped women just like you go from financial stress to financial confidence.</p>
-                <p>I built these courses because I know how powerful it feels to be in charge of your money—and I want you to feel that too.</p>
-                <p>My goal? To help you build wealth, freedom, and the future you've been dreaming of.</p>
-                <a href="#" class="btn">My Story</a>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Business Meeting">
+                </div>
+                <div class="about-text">
+                    <h2>Created for You, by Someone Who Gets It</h2>
+                    <p>🌸 Take Control of Your Money — Starting Today</p>
+                    <p>Are you tired of feeling stuck, stressed, or confused about money? You deserve financial freedom and peace of mind. My courses are designed for women who want to grow their income, save smarter, and build stability—without overwhelm or boring lectures.</p>
+                    <p>💡 Step-by-Step Lessons That Actually Work</p>
+                    <p>Inside my programs, you'll find easy-to-follow video lessons, templates you can download instantly, and simple checklists that show you exactly what to do next. From budgeting and saving, to building an emergency fund, paying off debt, and starting your first side hustle—everything is broken down into practical steps you can apply right away.</p>
+                    <p>✨ Created for You, by Someone Who Gets It</p>
+                    <p>Hi, I'm Maleeha! I've helped women just like you go from financial stress to financial confidence. I built these courses because I know how powerful it feels to be in charge of your money—and I want you to feel that too. My goal? To help you build wealth, freedom, and the future you've been dreaming of.</p>
+                    <p>👉 Ready to start? Enroll today and take the first step toward financial independence.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="section courses">
+    <section id="courses" class="section">
         <div class="container">
             <div class="section-title">
-                <h2>Popular Courses</h2>
+                <h2>Financial Courses</h2>
                 <p>Transform your financial future with our expertly designed courses</p>
             </div>
             <div class="courses-grid">
+                <!-- Course content will be added later -->
                 <div class="course-card">
                     <div class="course-icon">
-                        <i class="fas fa-piggy-bank"></i>
+                        <i class="fas fa-plus-circle"></i>
                     </div>
-                    <h3>Smart Saving Strategies</h3>
-                    <p>Learn how to save effectively without feeling deprived</p>
-                    <a href="#" class="btn">Enroll Now</a>
+                    <h3>More Courses Coming Soon</h3>
+                    <p>We're preparing amazing financial courses to help you achieve your goals</p>
                 </div>
                 <div class="course-card">
                     <div class="course-icon">
-                        <i class="fas fa-chart-line"></i>
+                        <i class="fas fa-plus-circle"></i>
                     </div>
-                    <h3>Debt Freedom Blueprint</h3>
-                    <p>Practical steps to eliminate debt and build financial health</p>
-                    <a href="#" class="btn">Enroll Now</a>
+                    <h3>More Courses Coming Soon</h3>
+                    <p>We're preparing amazing financial courses to help you achieve your goals</p>
                 </div>
                 <div class="course-card">
                     <div class="course-icon">
-                        <i class="fas fa-rocket"></i>
+                        <i class="fas fa-plus-circle"></i>
                     </div>
-                    <h3>Side Hustle Success</h3>
-                    <p>Start earning extra income with a side business</p>
-                    <a href="#" class="btn">Enroll Now</a>
+                    <h3>More Courses Coming Soon</h3>
+                    <p>We're preparing amazing financial courses to help you achieve your goals</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section testimonials">
+    <section id="stories" class="section">
         <div class="container">
             <div class="section-title">
                 <h2>Success Stories</h2>
                 <p>Hear from women who transformed their financial lives</p>
             </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Maleeha's course changed everything for me. I went from living paycheck to paycheck to saving over $5,000 in just six months!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">S</div>
-                        <div class="testimonial-name">Sarah, 32</div>
+            <div class="stories-grid">
+                <div class="story-card">
+                    <p class="story-text">"Maleeha's course changed everything for me. I went from living paycheck to paycheck to saving over $5,000 in just six months!"</p>
+                    <div class="story-author">
+                        <div class="story-avatar">S</div>
+                        <div class="story-name">Sarah, 32</div>
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"The side hustle course gave me the confidence to start my own business. I'm now making an extra $2,000 a month doing what I love!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">M</div>
-                        <div class="testimonial-name">Michelle, 28</div>
+                <div class="story-card">
+                    <p class="story-text">"The side hustle course gave me the confidence to start my own business. I'm now making an extra $2,000 a month doing what I love!"</p>
+                    <div class="story-author">
+                        <div class="story-avatar">M</div>
+                        <div class="story-name">Michelle, 28</div>
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"I was drowning in debt until I found Maleeha's program. Her practical approach helped me become debt-free in 18 months."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">J</div>
-                        <div class="testimonial-name">Jessica, 35</div>
+                <div class="story-card">
+                    <p class="story-text">"I was drowning in debt until I found Maleeha's program. Her practical approach helped me become debt-free in 18 months."</p>
+                    <div class="story-author">
+                        <div class="story-avatar">J</div>
+                        <div class="story-name">Jessica, 35</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="cta">
+    <section id="contact" class="section">
         <div class="container">
-            <h2>Ready to Transform Your Financial Life?</h2>
-            <p>Enroll today and take the first step toward financial independence</p>
-            <a href="#" class="btn btn-dark">Get Started Now</a>
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get in touch for more information about our courses</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <h3>Contact Information</h3>
+                        <p><i class="fas fa-envelope"></i> 0maleehaBuisness@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> +1 (123) 456-7890</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Financial Freedom Street, Suite 101</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Follow Us</h3>
+                        <p><i class="fab fa-instagram"></i> @maleehax_finance</p>
+                        <p><i class="fab fa-facebook"></i> Maleeha's Finance</p>
+                        <p><i class="fab fa-youtube"></i> Maleeha Finance Channel</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" placeholder="How can we help you?"></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -625,11 +635,11 @@
                 <div class="footer-logo">Maleeha's Finance</div>
                 <p>Empowering women to achieve financial freedom and peace of mind</p>
                 <ul class="footer-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Courses</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a onclick="showSection('home')">Home</a></li>
+                    <li><a onclick="showSection('about')">About</a></li>
+                    <li><a onclick="showSection('courses')">Courses</a></li>
+                    <li><a onclick="showSection('stories')">Success Stories</a></li>
+                    <li><a onclick="showSection('contact')">Contact</a></li>
                 </ul>
                 <div class="social-icons">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -645,6 +655,22 @@
     </footer>
 
     <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.style.display = 'none';
+            });
+            
+            // Hide home section
+            document.getElementById('home').style.display = 'none';
+            
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+            
+            // Scroll to the top of the page
+            window.scrollTo(0, 0);
+        }
+
         // Simple JavaScript for header scroll effect
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
